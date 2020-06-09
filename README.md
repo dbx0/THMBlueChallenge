@@ -5,16 +5,24 @@ Here is how I solved the Blue test on [TryHackMe](https://tryhackme.com/room/blu
 ## Testing ports and vulnerabilities
 
 Initial scan done on `scans/initial.nmap`.
-`$ nmap -sC -sV -oN initial.nmap 10.10.60.209`
+```sh
+$ nmap -sC -sV -oN initial.nmap 10.10.60.209
+```
 
 *Complete scan done with vulscan on `scans/vulscan.nmap`.
-`$ nmap -sC -sV --script=vulscan/vulscan.nse -oN vulscan.nmap 10.10.60.209`
+```sh
+$ nmap -sC -sV --script=vulscan/vulscan.nse -oN vulscan.nmap 10.10.60.209
+```
 
 *Found vulnerability ms12-020 on port 3389 on `scans/ms12-020.nmap`.
-`$nmap -sV --script=rdp-vuln-ms12-020 -oN ms12-020.nmap -p 3389 10.10.60.209`
+```sh
+$nmap -sV --script=rdp-vuln-ms12-020 -oN ms12-020.nmap -p 3389 10.10.60.209
+```
 
 *Found vulnerability ms17-010 on port 445 on `scans/smb-vuln`, which will be used on this test.
-`$nmap -sV --script smb-vuln* -oN smb-vuln.nmap -p 445 10.10.60.209`
+```sh
+$nmap -sV --script smb-vuln* -oN smb-vuln.nmap -p 445 10.10.60.209
+```
 
 ## Abusing vulnerabilities
 Found metasploit exploits on [SMB Penetration Testing (Port 445)](https://www.hackingarticles.in/smb-penetration-testing-port-445/)
