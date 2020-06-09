@@ -9,17 +9,17 @@ Initial scan done on `scans/initial.nmap`.
 $ nmap -sC -sV -oN initial.nmap 10.10.60.209
 ```
 
-*Complete scan done with vulscan on `scans/vulscan.nmap`.
+Complete scan done with vulscan on `scans/vulscan.nmap`.
 ```sh
 $ nmap -sC -sV --script=vulscan/vulscan.nse -oN vulscan.nmap 10.10.60.209
 ```
 
-*Found vulnerability ms12-020 on port 3389 on `scans/ms12-020.nmap`.
+Found vulnerability ms12-020 on port 3389 on `scans/ms12-020.nmap`.
 ```sh
 $nmap -sV --script=rdp-vuln-ms12-020 -oN ms12-020.nmap -p 3389 10.10.60.209
 ```
 
-*Found vulnerability ms17-010 on port 445 on `scans/smb-vuln`, which will be used on this test.
+Found vulnerability ms17-010 on port 445 on `scans/smb-vuln`, which will be used on this test.
 ```sh
 $nmap -sV --script smb-vuln* -oN smb-vuln.nmap -p 445 10.10.60.209
 ```
